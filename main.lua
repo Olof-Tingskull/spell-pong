@@ -6,9 +6,9 @@ function love.load()
   ball.dy = 400
 
   rightpaddle = {}
-  rightpaddle.y = 230
+  rightpaddle.y = 300
   leftpaddle = {}
-  leftpaddle.y =230
+  leftpaddle.y = 300
 end
 
 function love.update(dt)
@@ -17,6 +17,15 @@ function love.update(dt)
 
   if (ball.y - 15 < 0 and ball.dy < 0) or (ball.y + 15 > 600 and ball.dy > 0) then
     ball.dy = -ball.dy
+  end
+
+  if ball.x > 400 then
+    if ball.y > rightpaddle.y then
+      rightpaddle.y = rightpaddle.y + 200 *dt
+    end
+    if ball.y < rightpaddle.y then
+      rightpaddle.y = rightpaddle.y - 200 *dt
+    end
   end
 
   if love.keyboard.isDown("down") then
@@ -35,7 +44,8 @@ function love.update(dt)
 end
 
 function love.draw()
+  love.graphics.line (400, 0, 400, 600)
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
-  love.graphics.rectangle("fill", 780, rightpaddle.y, 20, 140)
-  love.graphics.rectangle("fill", 0, leftpaddle.y, 20, 140)
+  love.graphics.rectangle ("fill", 780, rightpaddle.y - 70, 20, 140)
+  love.graphics.rectangle ("fill", 0, leftpaddle.y - 70, 20, 140)
 end
