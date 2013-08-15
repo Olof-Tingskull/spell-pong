@@ -46,6 +46,6 @@ end
 function love.draw()
   love.graphics.line (400, 0, 400, 600)
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
-  love.graphics.rectangle ("fill", 780, rightpaddle.y - 70, 20, 140)
-  love.graphics.rectangle ("fill", 0, leftpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 780, rightpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 0, leftpaddle.y - 70, 20, 140)
 end
