@@ -9,13 +9,16 @@ function love.load()
 end
 
 function love.update(dt)
-rightpaddle.y = rightpaddle.y + 0 *dt
-leftpaddle.y = leftpaddle.y + 0 *dt
+  if love.keyboard.isDown("down") then
+    leftpaddle.y = leftpaddle.y + 200 *dt
+  end
+  if love.keyboard.isDown("up") then
+    leftpaddle.y = leftpaddle.y - 200 *dt
+  end
 end
 
 function love.draw()
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
   love.graphics.rectangle ("fill", 780, rightpaddle.y, 20, 140)
-   love.graphics.rectangle ("fill", 0, leftpaddle.y, 20, 140)
-
+  love.graphics.rectangle ("fill", 0, leftpaddle.y, 20, 140)
 end
