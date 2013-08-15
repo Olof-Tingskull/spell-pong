@@ -18,12 +18,19 @@ function love.update(dt)
   if (ball.y - 15 < 0 and ball.dy < 0) or (ball.y + 15 > 600 and ball.dy > 0) then
     ball.dy = -ball.dy
   end
-  
+
   if love.keyboard.isDown("down") then
     leftpaddle.y = leftpaddle.y + 200 *dt
   end
   if love.keyboard.isDown("up") then
     leftpaddle.y = leftpaddle.y - 200 *dt
+  end
+
+  if leftpaddle.y < 0 then
+    leftpaddle.y = 0
+  end
+  if leftpaddle.y > 460 then
+    leftpaddle.y = 460
   end
 end
 
