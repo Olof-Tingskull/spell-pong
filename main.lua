@@ -56,11 +56,11 @@ function love.update(dt)
     leftpaddle.y = leftpaddle.y - 200 *dt
   end
 
-  if leftpaddle.y < 0 then
-    leftpaddle.y = 0
+  if leftpaddle.y < 70 then
+    leftpaddle.y = 70
   end
-  if leftpaddle.y > 460 then
-    leftpaddle.y = 460
+  if leftpaddle.y > 530 then
+    leftpaddle.y = 530
   end
 end
 
