@@ -19,6 +19,14 @@ function love.update(dt)
     ball.dy = -ball.dy
   end
 
+  if ball.x < 35 and ball.dx < 0 and ball.y + 15 > leftpaddle.y - 70 and ball.y - 15 < leftpaddle.y + 70 then
+    ball.dx = -ball.dx
+  end
+
+  if ball.x > 765 and ball.dx > 0 and ball.y + 15 > rightpaddle.y - 70 and ball.y - 15 < rightpaddle.y + 70 then
+    ball.dx = -ball.dx
+  end
+
   if ball.x > 400 then
     if ball.y > rightpaddle.y then
       rightpaddle.y = rightpaddle.y + 200 *dt
