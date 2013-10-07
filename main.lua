@@ -21,12 +21,12 @@ function love.update(dt)
     ball.dy = -ball.dy
   end
 
-  if ball.x < 35 and ball.dx < 0 and ball.y + 15 > leftpaddle.y - 70 and ball.y - 15 < leftpaddle.y + 70 then
+  if ball.x < 55 and ball.dx < 0 and ball.y + 15 > leftpaddle.y - 70 and ball.y - 15 < leftpaddle.y + 70 then
     ball.dx = -ball.dx
   end
 
   
-  if ball.x > 765 and ball.dx > 0 and ball.y + 15 > rightpaddle.y - 70 and ball.y - 15 < rightpaddle.y + 70 then
+  if ball.x > 745 and ball.dx > 0 and ball.y + 15 > rightpaddle.y - 70 and ball.y - 15 < rightpaddle.y + 70 then
     ball.dx = -ball.dx
   end
 
@@ -69,6 +69,6 @@ function love.draw()
   love.graphics.print (rightpoints, 770, 0)
   love.graphics.line (400, 0, 400, 600)
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
-  love.graphics.rectangle("fill", 780, rightpaddle.y - 70, 20, 140)
-  love.graphics.rectangle("fill", 0, leftpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 760, rightpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 20, leftpaddle.y - 70, 20, 140)
 end
