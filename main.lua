@@ -4,6 +4,7 @@ function love.load()
   ball.y = 300
   ball.dx = 300
   ball.dy = 300
+  
   leftpoints = 0
   rightpoints = 0
 
@@ -69,6 +70,6 @@ function love.draw()
   love.graphics.print (rightpoints, 770, 0)
   love.graphics.line (400, 0, 400, 600)
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
-  love.graphics.rectangle("fill", 760, rightpaddle.y - 70, 20, 140)
-  love.graphics.rectangle("fill", 20, leftpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 780, rightpaddle.y - 70, 20, 140)
+  love.graphics.rectangle("fill", 0, leftpaddle.y - 70, 20, 140)
 end
