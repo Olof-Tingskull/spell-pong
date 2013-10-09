@@ -2,8 +2,8 @@ function love.load()
   ball = {}
   ball.x = 400
   ball.y = 300
-  ball.dx = 400
-  ball.dy = 400
+  ball.dx = 300
+  ball.dy = 300
   leftpoints = 0
   rightpoints = 0
 
