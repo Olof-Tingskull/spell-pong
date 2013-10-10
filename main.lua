@@ -9,7 +9,8 @@ function love.load()
   leftpoints = 0
   rightpoints = 0
 
-  love.graphics.newImage ("rightpaddle") 
+  rightpaddle = {}
+  rightpaddle.image = love.graphics.newImage ("rightpaddle.png") 
   rightpaddle.y = 300
   leftpaddle = {}
   leftpaddle.y = 300
@@ -79,6 +80,6 @@ function love.draw()
   love.graphics.print (rightpoints, 770, 0)
   love.graphics.line (400, 0, 400, 600)
   love.graphics.circle("fill", ball.x, ball.y, 15, 20)
-love.graphics.draw(rightpaddle, rightpaddle.x, rightpaddle.y)
+love.graphics.draw(rightpaddle.image, 780, rightpaddle.y - 70)
   love.graphics.rectangle("fill", 0, leftpaddle.y - 70, 20, 140)
 end
